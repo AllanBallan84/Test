@@ -1,0 +1,19 @@
+from fastapi import FastAPI
+import yfinance as yf
+import pandas as pd
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Välkommen till din AI-baserade investeringsassistent!"}
+
+@app.get("/analyze")
+def analyze_stock(ticker: str):
+    try:
+        stock = yf.Ticker(ticker)
+        hist = stock.history(period="1mo")
+        avg_price = hist["Close"].mean()
+        return {"ticker": ticker, "average_price": avg_price}
+    except Exception as e:
+        return {"error": str(e)}
