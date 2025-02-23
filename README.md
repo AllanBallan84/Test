@@ -8,6 +8,8 @@ pip install -r requirements.txt
 
 ## Kör servern
 ```
+cd src
+uvicorn main:app 
 uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
