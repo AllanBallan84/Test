@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 ## Kör servern
 ```
-uvicorn main:app --host 0.0.0.0 --port 8000
+uvicorn src.main:app --host 0.0.0.0 --port 8000
 ```
 
 ## API-endpoints
