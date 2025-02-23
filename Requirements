@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-yfinance
-pandas
-git reset --soft HEAD~1
-git push --force
