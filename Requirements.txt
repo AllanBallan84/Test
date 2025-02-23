@@ -2,6 +2,3 @@ fastapi
 uvicorn
 yfinance
 pandas
-git mv Requirements.txt requirements.txt
-git commit -m "Fix filename case issue"
-git push origin main
