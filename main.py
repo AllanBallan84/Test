@@ -54,7 +54,8 @@ def analyze_portfolio(portfolio: PortfolioData):
 
 @app.get("/")
 def hellow_world():
-    print("hellow_world")
+    sum = 1+1
+    return sum
 
 # Funktion för att skicka e-postnotifieringar
 def send_email(to_email, subject, body):
