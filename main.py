@@ -52,6 +52,10 @@ def analyze_portfolio(portfolio: PortfolioData):
     recommendations = generate_recommendations(portfolio)
     return {"recommendations": recommendations}
 
+@app.get("/")
+def hellow_world():
+    print("hellow_world")
+
 # Funktion för att skicka e-postnotifieringar
 def send_email(to_email, subject, body):
     sender_email = "your-email@gmail.com"
